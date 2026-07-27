@@ -1,0 +1,280 @@
+/* =======================================================================
+   BookBazzar Theme — "Classic Library / Modern Sci-Fi"
+   One global stylesheet, loaded from template/header.php, so every page
+   in the project (admin + user) automatically picks it up.
+   ======================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root{
+  /* classic library palette */
+  --parchment:      #f3e9d2;
+  --leather:        #3a2418;
+  --leather-dark:   #241209;
+  --gold:           #d4af37;
+  --gold-soft:      #e8cd7a;
+
+  /* modern sci-fi accent */
+  --void:           #070912;
+  --void-soft:      #10142a;
+  --neon:           #4fd8ff;
+  --neon-pink:      #ff5ec4;
+
+  --text-light:     #f4efe3;
+  --text-dim:       #b9b2a3;
+
+  --font-heading:   'Playfair Display', Georgia, serif;
+  --font-body:      'Space Grotesk', 'Segoe UI', Arial, sans-serif;
+
+  --radius:         14px;
+  --shadow-glow:    0 0 25px rgba(79, 216, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}
+
+html, body{
+  font-family: var(--font-body);
+  color: var(--text-light);
+  background:
+    radial-gradient(ellipse at 20% -10%, rgba(79,216,255,0.10), transparent 45%),
+    radial-gradient(ellipse at 90% 0%, rgba(255,94,196,0.08), transparent 40%),
+    linear-gradient(180deg, var(--void) 0%, var(--void-soft) 45%, var(--leather-dark) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, .navbar-brand{
+  font-family: var(--font-heading);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-inverse{
+  background: linear-gradient(90deg, var(--leather-dark), var(--void) 60%, var(--leather-dark));
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.navbar-inverse .navbar-brand{
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--gold-soft), var(--neon) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(79,216,255,0.35);
+}
+.navbar-inverse .navbar-nav > li > a{
+  color: var(--text-light) !important;
+  font-weight: 500;
+  position: relative;
+  transition: color .25s ease;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+  color: var(--neon) !important;
+}
+.navbar-inverse .navbar-nav > li > a::after{
+  content:"";
+  position:absolute;
+  left:15px; right:15px; bottom:6px;
+  height:2px;
+  background: linear-gradient(90deg, var(--gold), var(--neon));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+.navbar-inverse .navbar-nav > li > a:hover::after{ transform: scaleX(1); }
+.navbar-inverse .form-control{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(212,175,55,0.4);
+  color: var(--text-light);
+}
+.navbar-inverse .form-control::placeholder{ color: var(--text-dim); }
+
+/* ---------- Hero / jumbotron ---------- */
+.jumbotron{
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+  perspective: 900px;
+}
+.jumbotron h1{
+  font-size: 3em;
+  text-shadow: 0 0 30px rgba(79,216,255,0.6), 0 4px 10px rgba(0,0,0,0.8);
+  animation: floatY 5s ease-in-out infinite;
+}
+.jumbotron p{ color: var(--text-light); font-size: 1.2em; }
+
+@keyframes floatY{
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* ---------- Generic layout ---------- */
+#main{
+  background: rgba(16, 20, 42, 0.55);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: var(--radius);
+  padding: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+.lead{ color: var(--gold-soft) !important; }
+a{ color: var(--neon); }
+a:hover{ color: var(--neon-pink); }
+
+/* ---------- Book cover / 3D tilt cards ---------- */
+.img-thumbnail{
+  background: var(--parchment);
+  border: 3px solid var(--gold);
+  border-radius: 8px;
+  transition: transform .35s ease, box-shadow .35s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt-card{ perspective: 1000px; }
+.img-thumbnail:hover{
+  box-shadow: 0 25px 45px rgba(0,0,0,0.5), var(--shadow-glow);
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover{ transform: translateY(-3px); }
+.btn-primary{
+  background: linear-gradient(135deg, var(--leather), var(--void-soft));
+  border: 1px solid var(--gold);
+  color: var(--gold-soft);
+}
+.btn-primary:hover{
+  box-shadow: 0 8px 20px rgba(212,175,55,0.35);
+  color: var(--gold-soft);
+  background: linear-gradient(135deg, var(--void-soft), var(--leather));
+}
+.btn-success{
+  background: linear-gradient(135deg, #1f6f4a, #10402c);
+  border: 1px solid #57d99a;
+}
+.btn-success:hover{ box-shadow: 0 8px 20px rgba(87,217,154,0.35); }
+.btn-danger{
+  background: linear-gradient(135deg, #7a1f2b, #401019);
+  border: 1px solid #ff6b7a;
+}
+.btn-danger:hover{ box-shadow: 0 8px 20px rgba(255,107,122,0.3); }
+.btn-default{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text-light);
+}
+
+/* ---------- Tables ---------- */
+.table{ color: var(--text-light); }
+.table > thead > tr > th{
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold-soft);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+.table > tbody > tr > td, .table > tbody > tr > th{
+  border-top: 1px solid rgba(212,175,55,0.15);
+  vertical-align: middle;
+}
+.table-responsive{ border: none; }
+
+/* ---------- Admin extras ---------- */
+.admin-toolbar{ margin-bottom: 20px; display:flex; gap:10px; flex-wrap:wrap; }
+.section-heading{
+  border-left: 4px solid var(--neon);
+  padding-left: 12px;
+  color: var(--gold-soft);
+}
+.badge-count{
+  display:inline-block;
+  min-width: 26px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--neon), var(--neon-pink));
+  color: #08101c;
+  font-size: 14px;
+  font-weight: 700;
+  text-align:center;
+}
+.admin-table .admin-thumb{
+  width: 50px; height: 65px; object-fit: cover;
+  border-radius: 4px; border: 2px solid var(--gold);
+}
+.action-cell{ white-space: nowrap; }
+.type-badge{
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.type-resale{ background: rgba(79,216,255,0.18); color: var(--neon); border:1px solid var(--neon); }
+.type-donating{ background: rgba(212,175,55,0.18); color: var(--gold-soft); border:1px solid var(--gold); }
+.empty-state{
+  padding: 30px;
+  text-align:center;
+  color: var(--text-dim);
+  border: 1px dashed rgba(212,175,55,0.3);
+  border-radius: var(--radius);
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  margin-top: 40px;
+  background: linear-gradient(180deg, var(--leather-dark), var(--void) 80%);
+  border-top: 2px solid var(--gold);
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.4);
+}
+.site-footer .footer-inner{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 35px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.site-footer h4{
+  color: var(--gold-soft);
+  font-family: var(--font-heading);
+  border-bottom: 1px solid rgba(212,175,55,0.35);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.site-footer .footer-col{ flex: 1 1 220px; }
+.site-footer p, .site-footer li{ color: var(--text-dim); }
+.footer-book-list{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.book-entry{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: transform .25s ease, border-color .25s ease;
+}
+.book-entry:hover{
+  transform: translateX(4px) rotateX(2deg);
+  border-color: var(--neon);
+}
+.book-entry span{ color: var(--neon); margin: 0 6px; }
+.footer-bottom{
+  text-align:center;
+  padding: 14px;
+  font-size: 13px;
+  color: var(--text-dim);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
