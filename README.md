@@ -83,7 +83,7 @@ BookBazzar/
 
 # 📸 Screenshots
 
-> Replace the filenames if you rename them.
+> Working Flow of the images.
 
 ## 🏠 Homepage
 
@@ -108,14 +108,16 @@ BookBazzar/
 ## 🛒 Shopping Cart
 
 ![Cart](media/Addcart.png)
-
+git add .
+git commit -m "Update README and project documentation"
+git push
 ## 💳 Checkout
 
 ![Checkout](media/Checkout.png)
 
 ## 📦 Purchase Details
 
-![Purchase](media/PurchaseDetails.png)
+![Purchase](media/PurchasePage.png)
 
 ## 🏢 Publisher
 
