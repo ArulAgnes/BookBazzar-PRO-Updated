@@ -137,7 +137,11 @@ BookBazzar/
 
 ## 📦 Purchase Details
 
+<<<<<<< HEAD
 ![Purchase](media/PurchaseDetails.png)
+=======
+![Purchase](media/Purchasepage.png)
+>>>>>>> 7e2d0c3 (Update README and project documentation)
 
 ---
 
