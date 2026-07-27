@@ -108,16 +108,14 @@ BookBazzar/
 ## 🛒 Shopping Cart
 
 ![Cart](media/Addcart.png)
-git add .
-git commit -m "Update README and project documentation"
-git push
+
 ## 💳 Checkout
 
 ![Checkout](media/Checkout.png)
 
 ## 📦 Purchase Details
 
-![Purchase](media/PurchasePage.png)
+![Purchase](media/Purchasepage.png)
 
 ## 🏢 Publisher
 
