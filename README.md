@@ -151,7 +151,7 @@ BookBazzar/
 
 ## ✅ Admin Approval Panel
 
-![Admin Approval](media/AdminApprovalPage.png)
+![Admin Approval](media/AdminApporovalPage.png )
 
 ---
 
