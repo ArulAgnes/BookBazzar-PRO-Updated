@@ -85,49 +85,99 @@ BookBazzar/
 
 > Working Flow of the images.
 
+# 📸 Application Screenshots
+
 ## 🏠 Homepage
 
 ![Homepage](media/Homepage.png)
 
-## 🔐 Sign In
+---
 
-![Signin](media/Signin.png)
+## 🔐 User Login
 
-## 📝 Sign Up
+![Login](media/Signin.png)
+
+---
+
+## 📝 User Registration
 
 ![Signup](media/Signup.png)
 
-## 📚 Books
+---
+
+## 📚 Books Catalog
 
 ![Books](media/Books.png)
+
+---
 
 ## 📂 Categories
 
 ![Categories](media/Categories.png)
 
-## 🛒 Shopping Cart
-
-![Cart](media/Addcart.png)
-
-## 💳 Checkout
-
-![Checkout](media/Checkout.png)
-
-## 📦 Purchase Details
-
-![Purchase](media/Purchasepage.png)
+---
 
 ## 🏢 Publisher
 
 ![Publisher](media/Publisher.png)
 
-## 📤 Upload Books
+---
 
-![Upload](media/Upload%20bboks.png)
+## 🛒 Shopping Cart
 
-## ✅ Admin Approval
+![Cart](media/Addcart.png)
 
-![Approval](media/Admin%20apporoval%20page.png)
+---
+
+## 💳 Checkout
+
+![Checkout](media/Checkout.png)
+
+---
+
+## 📦 Purchase Details
+
+![Purchase](media/PurchaseDetails.png)
+
+---
+
+## 📤 Upload Donation Books
+
+![Upload Books](media/UploadBooks.png)
+
+---
+
+## ✅ Admin Approval Panel
+
+![Admin Approval](media/AdminApprovalPage.png)
+
+---
+
+## 📖 Admin Book Display
+
+![Admin Books](media/AdminApprovalBooksDisplay.png)
+
+---
+
+## 📧 Purchase Confirmation Email
+
+Users receive an automatic email after completing a purchase.
+
+![Purchase Email](media/GmailPurchaseNotification.jpeg)
+
+---
+
+## 📱 Login Alert Email
+
+Users receive a Gmail notification whenever they log in successfully.
+
+![Login Notification](media/PhoneLoginNotification.jpeg)
+
+---
+
+## 🗄 Database Structure
+
+![Database](media/DATABASE.png)
 
 ---
 
@@ -185,6 +235,18 @@ http://localhost/BookBazzar
 - CSS
 - JavaScript
 
+---
+# 📧 Contact
+
+**Developer**
+
+**Arul Maria Agnes I**
+
+📧 Email: agnes915033@gmail.com
+
+💻 GitHub: https://github.com/ArulAgnes
+
+If you have any questions, suggestions, or feedback regarding this project, feel free to contact me.
 ---
 
 # ⭐ Support
